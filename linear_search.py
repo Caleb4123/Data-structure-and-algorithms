@@ -15,11 +15,11 @@ elif search_choice == "integer":
     search = int(input("What item should be searched for? "))
 count = 0
 search_valid = False
-while search_valid != True and count > number_of_items:
+while search_valid != True and count < number_of_items:
     for i in range(number_of_items):
         if var[count] == search:
             search_valid = True
-            print(search_valid)
+            break
         else:
             search_valid = False
             count = count+1
