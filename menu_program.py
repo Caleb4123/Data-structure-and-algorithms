@@ -20,14 +20,20 @@ def linear(list1,item_search):
 def binary(list1,item_search):
     length = len(list1)
     found = False
-    while not found:
-        half = i[length/2]
-        if half == item_search:
+    start = 0
+    end = len(list1) - 1
+    while start <= end:
+        half = (start + end)//2
+        if list1[half] == item_search:
             print("The item has been found")
             found = True
             break
-    else:
-        print("The item is not in the list")
+        else:
+            if list1[half] > item_search:
+                end = half - 1
+            else:
+                start = half + 1
+     
 
 
 while True:
@@ -64,3 +70,8 @@ while True:
         elif len(var) > 0:
             search = int(input("Enter the item to be searched for: "))
             binary(var,search)
+    elif option == 5:
+        print(var)
+    elif option == 6:
+        print("Program over")
+        break
