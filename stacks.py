@@ -35,17 +35,24 @@ class stack:
             print("The stack is empty")        
         else:
             print("The stack is not empty")
+    def full(self):
+        if len(self.var) == self.total:
+            print("The stack is full") 
+        else:
+            print("stack is not full")
 #creating a stack object
-stack_object = stack(8)
+stack_object = stack(5)
 stack_object.empty()
 stack_object.push(12)
 stack_object.push(21)
 stack_object.push(8)
 stack_object.push(3)
 stack_object.push(17)
+stack_object.full()
 stack_object.display()
 stack_object.empty()
 stack_object.peek()
 stack_object.size()
 stack_object.pop()
 stack_object.display()
+stack_object.full()
